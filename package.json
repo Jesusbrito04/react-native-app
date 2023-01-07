@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint ./src/**/*.{js,jsx} App.js --no-error-on-unmatched-pattern"
   },
   "dependencies": {
     "expo": "~47.0.9",
@@ -20,6 +21,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.31.0",
+    "eslint-plugin-react": "^7.31.11",
     "metro": "^0.73.7",
     "metro-core": "^0.73.7"
   },
