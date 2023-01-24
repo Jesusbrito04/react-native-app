@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from "react";
+import Main from "./src/components/Main";
+import { NativeRouter } from "react-router-native";
+import FontRegisters from "./src/components/fontRegisters";
+import * as SplashScreen from "expo-splash-screen";
 
-export default function App() {
+const App = () => {
+  useEffect(() => {
+    const prepare = async () => {
+      await SplashScreen.preventAutoHideAsync();
+    };
+    prepare();
+  }, []);
+
+  if (!FontRegisters()) {
+    return null;
+  } else {
+    SplashScreen.hideAsync();
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeRouter>
+      <Main />
+    </NativeRouter>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
