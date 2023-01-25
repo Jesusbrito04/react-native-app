@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import Constants from "expo-constants";
 import { Link } from "react-router-native";
+import { fontFamilyPlataforms } from "./styleByPlataform";
 
 const styles = StyleSheet.create({
   container: {
@@ -15,6 +16,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
     padding: 10,
+    fontFamily: fontFamilyPlataforms,
   },
 });
 

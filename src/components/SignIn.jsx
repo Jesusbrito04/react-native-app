@@ -1,7 +1,6 @@
 import React from "react";
 import FormikTextInput from "./FormikTextInput";
 import { Text, View, StyleSheet } from "react-native";
-import { Formik } from "formik";
 
 const styles = StyleSheet.create({
   container: {

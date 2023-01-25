@@ -1,20 +1,20 @@
-import { useCallback } from "react";
 import {
   StyleSheet,
   View,
   Text,
   TextInput,
   TouchableWithoutFeedback,
-  Platform,
 } from "react-native";
 import { Formik } from "formik";
 import * as yup from "yup";
+import { fontFamilyPlataforms } from "./styleByPlataform";
 
 const styles = StyleSheet.create({
   errorText: {
     paddingBottom: 10,
     color: "#d73a4a",
     fontSize: 16,
+    fontFamily: fontFamilyPlataforms,
   },
   botton: {
     backgroundColor: "#0366d6",
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     textAlign: "center",
+    fontFamily: fontFamilyPlataforms,
   },
   fieldStyle: {
     marginBottom: 10,

@@ -1,7 +1,7 @@
 import react from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 import RepositoryItem from "./RepositoryItem";
-import { Platform } from "react-native";
+import { fontFamilyPlataforms } from "./styleByPlataform";
 
 const styles = StyleSheet.create({
   separator: {
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontWeight: "bold",
-    fontFamily: "Arial",
+    fontFamily: fontFamilyPlataforms,
     color: "#24292e",
     fontSize: 16,
     marginBottom: 10,
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     color: "#586069",
     fontSize: 16,
     marginBottom: 10,
-    fontFamily: "Arial",
+    fontFamily: fontFamilyPlataforms,
   },
 
   headerInfo: {
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 16,
     color: "white",
+    fontFamily: fontFamilyPlataforms,
   },
 
   body: {
@@ -58,6 +59,7 @@ const styles = StyleSheet.create({
     padding: 5,
     fontSize: 16,
     marginBottom: 10,
+    fontFamily: fontFamilyPlataforms,
   },
 
   statics: {
@@ -66,12 +68,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginTop: 10,
     marginBottom: 10,
+    fontFamily: fontFamilyPlataforms,
   },
 
   text: {
     color: "#586069",
     fontSize: 16,
     marginBottom: 10,
+    fontFamily: fontFamilyPlataforms,
   },
 });
 
