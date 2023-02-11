@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from "react";
+import Main from "./src/components/Main";
+import { NativeRouter } from "react-router-native";
+import FontRegisters from "./src/utils/fontRegisters";
+import * as SplashScreen from "expo-splash-screen";
+import { ApolloProvider } from "@apollo/react-hooks";
+import createApolloClient from "./src/utils/apolloClient";
 
-export default function App() {
+const apolloClient = createApolloClient();
+
+const App = () => {
+  useEffect(() => {
+    const prepare = async () => {
+      await SplashScreen.preventAutoHideAsync();
+    };
+    prepare();
+  }, []);
+  if (!FontRegisters()) {
+    return null;
+  } else {
+    SplashScreen.hideAsync();
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeRouter>
+      <ApolloProvider client={apolloClient}>
+        <Main />
+      </ApolloProvider>
+    </NativeRouter>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
