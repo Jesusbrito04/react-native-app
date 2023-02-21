@@ -1,5 +1,6 @@
-import { View, Text, Image, TouchableWithoutFeedback } from "react-native";
-import numFormatter from "./nFormatter";
+import { View, Text, Image } from "react-native";
+import React from "react";
+import numFormatter from "../utils/nFormatter";
 
 const RepositoryItem = ({ item, style }) => {
   return (

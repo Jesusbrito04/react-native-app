@@ -1,8 +1,8 @@
-import { Text, StyleSheet, View } from "react-native";
-import React, { useCallback } from "react";
+import { StyleSheet, View } from "react-native";
+import React from "react";
 import RepositoryList from "./RepositoryList";
 import AppBar from "./AppBar";
-import { Route, Redirect, Routes } from "react-router-native";
+import { Route, Routes } from "react-router-native";
 import SignIn from "./SignIn";
 
 const Main = () => {
@@ -16,6 +16,7 @@ const Main = () => {
     </View>
   );
 };
+
 export default Main;
 
 const styles = StyleSheet.create({
